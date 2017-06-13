@@ -99,6 +99,7 @@ class VCFLine(object):
         vcf_fields = vcf_line.strip().split('\t')
         self.chrom = vcf_fields[0]
         self.start = int(vcf_fields[1])
+        self.dbsnp_id = vcf_fields[2]
         self.ref_allele = vcf_fields[3]
         if vcf_fields[4] == '.':
             self.alt_alleles = []
